@@ -33,6 +33,13 @@ function Nav() {
             <Link className="navLink" to="/edibleform">
               Submit Form
             </Link>
+            <Link className="navLink" to="/journal">
+              User Journal
+            </Link>
+            <Link className="navLink" to="/journalform">
+              User Journal Entry
+            </Link>
+
 
             <LogOutButton className="navLink" />
           </>

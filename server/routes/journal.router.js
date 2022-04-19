@@ -19,7 +19,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 router.post('/', rejectUnauthenticated, (req, res) => {
 
-    const query = `INSERT INTO "user_finds" ("edible", "description", "season", "location", "image")
+    const query = `INSERT INTO "user_finds" ("item_name", "description", "season", "location", "image")
                     VALUES ($1, $2, $3, $4, $5);`;
 
     const values = [req.body.edible, req.body.description, req.body.season, req.body.location, req.body.image]

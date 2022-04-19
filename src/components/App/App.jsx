@@ -21,8 +21,8 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import EdibleListPage from '../EdibleListPage/EdibleListPage';
 import EdibleFormPage from '../EdibleFormPage/EdibleFormPage';
-
-
+import JournalListPage from '../JournalListPage/JournalListPage';
+import JournalFormPage from '../JournalFormPage/JournalFormPage';
 import './App.css';
 
 function App() {
@@ -62,7 +62,7 @@ function App() {
           >
             <UserPage />
           </ProtectedRoute>
-{/* edible list page */}
+          {/* edible list page */}
           <ProtectedRoute
             exact
             path="/edible">
@@ -70,13 +70,29 @@ function App() {
 
           </ProtectedRoute>
 
-{/* edible form page */}
+          {/* edible form page */}
           <ProtectedRoute
             exact
             path="/edibleform">
             <EdibleFormPage />
 
           </ProtectedRoute>
+          {/* journal list page */}
+          <ProtectedRoute
+            exact
+            path="/journal">
+            <JournalListPage />
+
+          </ProtectedRoute>
+          {/* journal form page */}
+
+          <ProtectedRoute
+            exact
+            path="/journalform">
+            <JournalFormPage />
+
+          </ProtectedRoute>
+
 
 
           <Route

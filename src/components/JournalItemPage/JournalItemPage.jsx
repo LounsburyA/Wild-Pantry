@@ -15,7 +15,7 @@ function JournalItem({item}) {
         <div>
             <ul>
                 <img src={item.image}/>
-                <li>{item.edible}</li>
+                <li>{item.item_name}</li>
                 <li>{item.description}</li>
                 <li>{item.season}</li>
                 <li>{item.location}</li>
