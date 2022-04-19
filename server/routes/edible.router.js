@@ -16,6 +16,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
             console.log('Error in edibles GET', err);
         })
 });
+
 router.post('/', rejectUnauthenticated, (req, res) => {
 
     const query = `INSERT INTO "edibles_db" ("edible", "description", "season", "location", "image")

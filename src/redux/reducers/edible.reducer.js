@@ -5,3 +5,4 @@ const edibleReducer = (state= [], action )=>{
         return state;
     }
 }
+export default edibleReducer;
