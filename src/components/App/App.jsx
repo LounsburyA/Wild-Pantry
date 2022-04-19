@@ -62,7 +62,7 @@ function App() {
           >
             <UserPage />
           </ProtectedRoute>
-
+{/* edible list page */}
           <ProtectedRoute
             exact
             path="/edible">
@@ -70,6 +70,13 @@ function App() {
 
           </ProtectedRoute>
 
+{/* edible form page */}
+          <ProtectedRoute
+            exact
+            path="/edibleform">
+            <EdibleFormPage />
+
+          </ProtectedRoute>
 
 
           <Route

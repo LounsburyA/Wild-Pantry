@@ -30,6 +30,9 @@ function Nav() {
             <Link className="navLink" to="/edible">
               The Pantry
             </Link>
+            <Link className="navLink" to="/edibleform">
+              Submit Form
+            </Link>
 
             <LogOutButton className="navLink" />
           </>

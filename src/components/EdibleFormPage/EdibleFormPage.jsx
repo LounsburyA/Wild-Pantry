@@ -14,7 +14,7 @@ function EdibleFormPage() {
     const addEdible = (event) => {
         event.preventDefault();
         dispatch({
-            type: 'ADD_EDIBLE', payload:
+            type: 'POST_EDIBLE', payload:
                 { image: newPicture, edible: newEdible, description: newDescription, season: newSeason, location: newLocation }
         })
         setNewPicture(''); setNewEdible(''); setNewDescription(''); setNewSeason(''); setNewLocation('');
@@ -47,7 +47,7 @@ function EdibleFormPage() {
                     onChange={(event) => setNewSeason(event.target.value)}
                 />
                 <input
-                    placeholder="season"
+                    placeholder="location"
                     type="text"
                     value={newLocation}
                     onChange={(event) => setNewLocation(event.target.value)}

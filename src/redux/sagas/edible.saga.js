@@ -11,7 +11,19 @@ function* getEdible() {
 
     }
 }
+function* postEdible(action){
+    try {
+        yield axios.post('/api/edible', action.payload)
+        yield put({type: 'FETCH_EDIBLE'})
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
+
 function* edibleSaga() {
     yield takeEvery('FETCH_EDIBLE',getEdible)
+    yield takeEvery('POST_EDIBLE', postEdible)
 }
 export default edibleSaga;
