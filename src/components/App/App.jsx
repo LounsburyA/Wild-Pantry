@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import EdibleListPage from '../EdibleListPage/EdibleListPage';
+import EdibleFormPage from '../EdibleFormPage/EdibleFormPage';
 
 
 import './App.css';
@@ -61,6 +62,7 @@ function App() {
           >
             <UserPage />
           </ProtectedRoute>
+
           <ProtectedRoute
             exact
             path="/edible">
@@ -68,7 +70,7 @@ function App() {
 
           </ProtectedRoute>
 
-         
+
 
           <Route
             exact
