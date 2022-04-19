@@ -1,27 +1,29 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import EdibleItem from "../EdibleItemPage/EdibleItemPage";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
 
-function JournalListPage() {
+
+function JournalItem({item}) {
     useEffect(() => {
-        dispatch({ type: 'FETCH_EDIBLE' });
+        dispatch({ type: 'FETCH_JOURNAL' });
     }, []);
     const dispatch = useDispatch();
-    const edible = useSelector(store => store.edible)
+
 
     return (
-        <>
-        <div className="container">
-            <h1>Wild Pantry</h1>
-            <ul>{edible.map(item=>(
-                <EdibleItem key={item.id}
-                item ={item}
-            />))}
-                
+        <div>
+            <ul>
+                <img src={item.image}/>
+                <li>{item.edible}</li>
+                <li>{item.description}</li>
+                <li>{item.season}</li>
+                <li>{item.location}</li>
             </ul>
+            <button>Edit</button>
+            <button>Delete</button>
+
         </div>
-        </>
     )
 }
-export default JournalListPage;
+export default JournalItem;

@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import JournalItem from "../JournalItemPage/JournalItem";
+import EdibleItem from "../EdibleItemPage/EdibleItemPage";
 
 function EdibleListPage() {
     useEffect(() => {
         dispatch({ type: 'FETCH_EDIBLE' });
     }, []);
     const dispatch = useDispatch();
-    const edible = useSelector(store => store.FIXTHIS)
+    const edible = useSelector(store => store.edible)
 
     return (
         <>
         <div className="container">
             <h1>Wild Pantry</h1>
             <ul>{edible.map(item=>(
-                <JournalItem key={item.id}
+                <EdibleItem key={item.id}
                 item ={item}
             />))}
                 
