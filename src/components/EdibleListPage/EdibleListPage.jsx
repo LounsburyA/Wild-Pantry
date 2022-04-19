@@ -16,7 +16,7 @@ function EdibleListPage() {
             <h1>Wild Pantry</h1>
             <ul>{edible.map(item=>(
                 <EdibleItem key={item.id}
-                edible ={edible}
+                item ={item}
             />))}
                 
             </ul>

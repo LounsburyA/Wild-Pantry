@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
-function EdibleItem() {
+function EdibleItem({item}) {
     useEffect(() => {
         dispatch({ type: 'FETCH_EDIBLE' });
     }, []);
@@ -16,13 +16,16 @@ function EdibleItem() {
         <div>
 
             <ul>
-                <img src= "images/morel1.jpeg"/>
-                <li>{edible[0].edible}</li>
-                <li>{edible[0].description}</li>
-                <li>{edible[0].season}</li>
-                <li>{edible[0].location}</li>
+                <img src={item.image}/>
+                <li>{item.edible}</li>
+                <li>{item.description}</li>
+                <li>{item.season}</li>
+                <li>{item.location}</li>
 
             </ul>
+            <button>Edit</button>
+            <button>Delete</button>
+
         </div>
     )
 }
