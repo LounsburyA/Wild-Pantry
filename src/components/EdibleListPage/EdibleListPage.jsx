@@ -9,18 +9,17 @@ function EdibleListPage() {
     }, []);
     const dispatch = useDispatch();
     const edible = useSelector(store => store.edible)
-
+    const user = useSelector(store => store.user);
     return (
         <>
-        <div className="container">
-            <h1>Wild Pantry</h1>
-            <ul>{edible.map(item=>(
-                <EdibleItem key={item.id}
-                item ={item}
-            />))}
-                
-            </ul>
-        </div>
+            <div className="container">
+                <h1>Wild Pantry</h1>
+                <ul>{edible.map(item => (
+                    <EdibleItem key={item.id}
+                        item={item}
+                    />))}
+                </ul>
+            </div>
         </>
     )
 }

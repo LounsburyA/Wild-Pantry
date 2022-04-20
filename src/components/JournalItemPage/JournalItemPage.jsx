@@ -4,25 +4,25 @@ import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
-function JournalItem({item}) {
+function JournalItem({ item }) {
     useEffect(() => {
         dispatch({ type: 'FETCH_JOURNAL' });
     }, []);
     const dispatch = useDispatch();
 
-
+    //displays user pantry edible info
     return (
         <div>
-            <ul>
-                <img src={item.image}/>
-                <li>{item.item_name}</li>
-                <li>{item.description}</li>
-                <li>{item.season}</li>
-                <li>{item.location}</li>
-            </ul>
-            <button>Edit</button>
-            <button>Delete</button>
-
+            <>
+                <img src={item.image} />
+                <div>{item.item_name}</div>
+                <div>{item.description}</div>
+                <div>{item.season}</div>
+                <div>{item.location}</div>
+                <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
+                >Delete</button>
+                <button>Delete</button>
+            </>
         </div>
     )
 }
