@@ -25,7 +25,7 @@ function* deleteEntry(action){
     const id = action.payload;
     console.log('saga delete entry id:', id);
     try {
-        yield axios.delete(`/api/edible/${id}`)
+        yield axios.delete(`/api/journal/${id}`)
         yield put({type: 'FETCH_JOURNAL'})
     } catch (error) {
         console.log('Error in delete entry catch', error);
@@ -39,5 +39,6 @@ function* deleteEntry(action){
 function* journalSaga() {
     yield takeEvery('FETCH_JOURNAL',getJournal)
     yield takeEvery('POST_JOURNAL', postJournal)
+    yield takeEvery('DELETE_ENTRY', deleteEntry)
 }
 export default journalSaga;

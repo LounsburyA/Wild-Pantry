@@ -21,7 +21,7 @@ function JournalItem({ item }) {
                 <div>{item.location}</div>
                 <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
                 >Delete</button>
-                <button>Delete</button>
+                <button>Edit</button>
             </>
         </div>
     )

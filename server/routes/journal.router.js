@@ -22,7 +22,7 @@ router.post('/', rejectUnauthenticated, (req, res) => {
     const query = `INSERT INTO "user_finds" ("item_name", "description", "season", "location", "image", "user_id")
                     VALUES ($1, $2, $3, $4, $5, $6);`;
 
-    const values = [req.body.edible, req.body.description, req.body.season, req.body.location, req.body.image, req.user.id]
+    const values = [req.body.edible, req.body.description, req.body.season, req.body.location, req.body.image, req.user_id]
     pool.query(query, values)
         .then(result => {
             res.sendStatus(201);
