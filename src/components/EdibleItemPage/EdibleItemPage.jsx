@@ -18,11 +18,11 @@ function EdibleItem({ item }) {
         <div>
 
             <>
-                <img src={item.image}  />
-                <div>{item.edible}</div>
-                <div>{item.description}</div>
-                <div>{item.season}</div>
-                <div>{item.location}</div>
+                <img src={item.image} height ="200px"/>
+                <div>Name:{item.edible}</div>
+                <div>Description:{item.description}</div>
+                <div>Season:{item.season}</div>
+                <div>Location:{item.location}</div>
                 <button>Edit</button>
                 <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
                 >Delete</button>

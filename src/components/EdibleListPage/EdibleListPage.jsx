@@ -14,11 +14,11 @@ function EdibleListPage() {
         <>
             <div className="container">
                 <h1>Wild Pantry</h1>
-                <ul>{edible.map(item => (
+                <div>{edible.map(item => (
                     <EdibleItem key={item.id}
                         item={item}
                     />))}
-                </ul>
+                </div>
             </div>
         </>
     )
