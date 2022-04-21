@@ -11,8 +11,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const edibleRouter = require ('./routes/edible.router');
 const journalRouter =require('./routes/journal.router')
-const editRouter = require('./routes/edit.router')
-// Body parser middleware
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -27,7 +26,6 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/edible', edibleRouter);
 app.use('/api/journal', journalRouter);
-app.use ('/api/edit', editRouter)
 
 // Serve static files
 app.use(express.static('build'));
