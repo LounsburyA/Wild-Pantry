@@ -23,6 +23,7 @@ import EdibleListPage from '../EdibleListPage/EdibleListPage';
 import EdibleFormPage from '../EdibleFormPage/EdibleFormPage';
 import JournalListPage from '../JournalListPage/JournalListPage';
 import JournalFormPage from '../JournalFormPage/JournalFormPage';
+import EditUserForm from '../EditFormPage/EditFormPage';
 import './App.css';
 
 function App() {
@@ -85,6 +86,12 @@ function App() {
 
           </ProtectedRoute>
           {/* journal form page */}
+          <ProtectedRoute
+            exact
+            path="/journal/:id">
+            < EditUserForm/>
+
+          </ProtectedRoute>
 
           <ProtectedRoute
             exact

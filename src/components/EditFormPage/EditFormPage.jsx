@@ -3,18 +3,18 @@ import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
 
 
-function editUserForm() {
+function EditUserForm() {
 
     const dispatch = useDispatch();
     const id = useParams().id;
     const history = useHistory();
     const editJournal = useSelector(store => store.editJournal);
 
-    useEffect(() => {
-        dispatch({ type: 'FETCH_EDIT_JOURNAL', payload: id })
-    }, [id])
+    // useEffect(() => {
+    //     dispatch({ type: 'GET_EDIT_JOURNAL', payload: id })
+    // }, [id])
 
-
+// MAY NOT NEED THIS USEEFFECT
     const handleChange = (event, property) => {
         dispatch({
             type: 'EDIT_ONCHANGE',
@@ -26,7 +26,7 @@ const handleSubmit = (event) => {
 
     dispatch({ type: 'UPDATE_ENTRY', payload: editJournal })
     dispatch({ type: 'CLEAR_EDIT' });
-    history.push('/journal')
+    history.push('/journal/')
 
 }
 
@@ -70,4 +70,4 @@ const handleSubmit = (event) => {
         </>
     )
 }
-export default editUserForm;
+export default EditUserForm;

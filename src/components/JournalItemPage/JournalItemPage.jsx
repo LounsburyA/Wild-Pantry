@@ -9,6 +9,14 @@ function JournalItem({ item }) {
         dispatch({ type: 'FETCH_JOURNAL' });
     }, []);
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const toEdit = () => {
+        history.push(`/journal/${item.id}`)
+    }
+
+
+
 
     //displays user pantry edible info
     return (
@@ -21,7 +29,7 @@ function JournalItem({ item }) {
                 <div>{item.location}</div>
                 <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
                 >Delete</button>
-                <button>Edit</button>
+                <button onClick ={toEdit}>Edit</button>
             </>
         </div>
     )
