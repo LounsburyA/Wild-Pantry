@@ -4,13 +4,13 @@ const router = express.Router();
 const { rejectUnauthenticated } = require('../modules/authentication-middleware')
 
 
-
+// Where "user_id" = $1;
 
 
 router.get('/', rejectUnauthenticated, (req, res) => {
-    const query = `SELECT * FROM "user_finds" Where "user_id" = $1;`
-    const values = [req.user.id]
-    pool.query(query,values)
+    const query = `SELECT * FROM "user_finds";`
+   // const values = [req.user.id]
+    pool.query(query)
         .then((results) => res.send(results.rows))
         .catch((err) => {
             console.log('Error in journal GET', err);

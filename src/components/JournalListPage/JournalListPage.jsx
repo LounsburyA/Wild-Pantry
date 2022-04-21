@@ -5,7 +5,7 @@ import JournalItem from "../JournalItemPage/JournalItemPage";
 
 function JournalListPage() {
     useEffect(() => {
-        dispatch({ type: 'FETCH_EDIBLE' });
+        dispatch({ type: 'FETCH_JOURNAL' });
     }, []);
     const dispatch = useDispatch();
     const journal = useSelector(store => store.journal)
