@@ -88,7 +88,7 @@ function App() {
           {/* journal form page */}
           <ProtectedRoute
             exact
-            path="/journal/:id">
+            path="/editform">
             < EditUserForm/>
 
           </ProtectedRoute>

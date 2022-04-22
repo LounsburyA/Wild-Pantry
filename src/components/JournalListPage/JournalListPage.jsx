@@ -9,6 +9,15 @@ function JournalListPage() {
     }, []);
     const dispatch = useDispatch();
     const journal = useSelector(store => store.journal)
+    const history = useHistory();
+
+    const toPantry = () =>{
+        history.push('/edible')
+    }
+
+    const toJournalForm = ()=>{
+        history.push('/journalform')
+    }
 
     return (
         <>
@@ -21,6 +30,8 @@ function JournalListPage() {
                 
             </ul>
         </div>
+        <button onClick = {toPantry}>The Pantry</button>
+        <button onClick = {toJournalForm}>Add to Your Pantry</button>
         </>
     )
 }

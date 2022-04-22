@@ -10,9 +10,10 @@ function EditUserForm() {
     const history = useHistory();
     const editJournal = useSelector(store => store.editJournal);
 
-    // useEffect(() => {
-    //     dispatch({ type: 'GET_EDIT_JOURNAL', payload: id })
-    // }, [id])
+    // MAY NOT NEED THIS USEEFFECT
+    useEffect(() => {
+        dispatch({ type: 'GET_EDIT_JOURNAL', payload: id })
+    }, [id])
 
 // MAY NOT NEED THIS USEEFFECT
     const handleChange = (event, property) => {
@@ -26,7 +27,7 @@ const handleSubmit = (event) => {
 
     dispatch({ type: 'UPDATE_ENTRY', payload: editJournal })
     dispatch({ type: 'CLEAR_EDIT' });
-    history.push('/journal/')
+    history.push('/journal')
 
 }
 

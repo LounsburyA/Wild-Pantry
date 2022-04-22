@@ -12,7 +12,7 @@ function JournalItem({ item }) {
     const history = useHistory();
 
     const toEdit = () => {
-        history.push(`/journal/${item.id}`)
+        history.push(`/editform`)
     }
 
 

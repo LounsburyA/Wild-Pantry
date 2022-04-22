@@ -11,6 +11,7 @@ function* getEditJournal(action) {
         console.log(error);
     }
 }
+
 function updateJournal(action) {
     try {
         console.log('update journal action payload', action.payload);

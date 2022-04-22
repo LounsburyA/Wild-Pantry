@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom";
 
 
 function JournalFormPage() {
@@ -10,6 +11,7 @@ function JournalFormPage() {
     const [newLocation, setNewLocation] = useState('')
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const addEdible = (event) => {
         event.preventDefault();
@@ -19,6 +21,14 @@ function JournalFormPage() {
         })
         setNewPicture(''); setNewEdible(''); setNewDescription(''); setNewSeason(''); setNewLocation('');
     }
+
+    const toJournal = ()=>{
+        history.push('/journal')
+    }
+    const toPantry = () =>{
+        history.push('/edible')
+    }
+
     return (
         <>
             <form onSubmit={addEdible}>
@@ -56,6 +66,8 @@ function JournalFormPage() {
 
                 <button type="submit">Add Item</button>
             </form>
+            <button onClick = {toPantry}>The Pantry</button>
+            <button onClick = {toJournal}>Your Pantry</button>
         </>
     )
 }

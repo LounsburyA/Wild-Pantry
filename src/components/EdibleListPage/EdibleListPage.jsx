@@ -10,6 +10,21 @@ function EdibleListPage() {
     const dispatch = useDispatch();
     const edible = useSelector(store => store.edible)
     const user = useSelector(store => store.user);
+    const history = useHistory();
+
+    const toPantryForm = ()=>{
+        history.push('/edibleform')
+    }
+
+    const toJournalForm = ()=>{
+        history.push('/journalform')
+    }
+    const toJournal = ()=>{
+        history.push('/journal')
+    }
+
+
+
     return (
         <>
             <div className="container">
@@ -20,6 +35,9 @@ function EdibleListPage() {
                     />))}
                 </div>
             </div>
+            <button onClick = {toPantryForm}>Add to Pantry</button>
+            <button onClick = {toJournalForm}>Add to Your Pantry</button>
+            <button onClick = {toJournal}>Your Pantry</button>
         </>
     )
 }
