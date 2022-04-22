@@ -6,9 +6,10 @@ import { useParams, useHistory } from 'react-router-dom'
 function EditUserForm() {
 
     const dispatch = useDispatch();
-    const id = useParams().id;
+    const {id} = useParams();
     const history = useHistory();
     const editJournal = useSelector(store => store.editJournal);
+
 
     // MAY NOT NEED THIS USEEFFECT
     useEffect(() => {
@@ -24,13 +25,15 @@ function EditUserForm() {
     }
 const handleSubmit = (event) => {
     event.preventDefault();
-
+console.log('submit clicked');
     dispatch({ type: 'UPDATE_ENTRY', payload: editJournal })
-    dispatch({ type: 'CLEAR_EDIT' });
+    //dispatch({ type: 'CLEAR_EDIT' });
     history.push('/journal')
 
 }
 
+
+console.log(editJournal,    'this is what we are looking for');
     return (
         <>
             <form action="submit" onSubmit={handleSubmit}>
@@ -66,7 +69,7 @@ const handleSubmit = (event) => {
                 />
 
 
-                <button type="submit">Update Entry</button>
+                <input type="submit"/>
             </form>
         </>
     )

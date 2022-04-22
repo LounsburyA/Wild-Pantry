@@ -12,7 +12,9 @@ function JournalItem({ item }) {
     const history = useHistory();
 
     const toEdit = () => {
-        history.push(`/editform`)
+        //dispatch to send item to 
+        dispatch({type: 'SEND_ITEM', payload: item})
+        history.push(`/editform/${item.id}`)
     }
 
 
@@ -23,10 +25,10 @@ function JournalItem({ item }) {
         <div>
             <>
                 <img src={item.image} />
-                <div>{item.item_name}</div>
-                <div>{item.description}</div>
-                <div>{item.season}</div>
-                <div>{item.location}</div>
+                <div>Name: {item.item_name}</div>
+                <div>Description: {item.description}</div>
+                <div>Season: {item.season}</div>
+                <div>Location: {item.location}</div>
                 <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
                 >Delete</button>
                 <button onClick ={toEdit}>Edit</button>

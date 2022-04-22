@@ -36,6 +36,7 @@ function* deleteEntry(action){
 
 
 
+
 function* journalSaga() {
     yield takeEvery('FETCH_JOURNAL',getJournal)
     yield takeEvery('POST_JOURNAL', postJournal)

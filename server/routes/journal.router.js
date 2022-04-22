@@ -9,13 +9,27 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
 
 router.get('/', rejectUnauthenticated, (req, res) => {
     const query = `SELECT * FROM "user_finds";`
-   // const values = [req.user.id]
+  
     pool.query(query)
+        .then((results) => res.send(results.rows))
+        .catch((err) => {
+            console.log('Error in taco taco taco GET', err);
+        })
+});
+
+
+router.get('/:id', rejectUnauthenticated, (req, res) => {
+    const query = `SELECT * FROM "user_finds" WHERE "id" =$1;`
+
+    pool.query(query,[req.params.id])
         .then((results) => res.send(results.rows))
         .catch((err) => {
             console.log('Error in journal GET', err);
         })
 });
+
+
+
 
 router.post('/', rejectUnauthenticated, (req, res) => {
 
@@ -48,10 +62,10 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
 
 router.put('/:id', rejectUnauthenticated, (req, res) => {
     const edit = req.body
-    const query = `UPDATE "edibles_db" SET  "edible" = $1, "description" = $2, "season" = $3,
+    const query = `UPDATE "user_finds" SET  "item_name" = $1, "description" = $2, "season" = $3,
     "location" = $4, "image" = $5 WHERE "id" = $6;`;
 
-    const values = [ edit.edible, edit.description, edit.season, edit.location, edit.image, edit.id]
+    const values = [ edit.item_name, edit.description, edit.season, edit.location, edit.image, req.params.id]
     pool.query(query,values)
     .then(result=>{
         res.sendStatus(200);
@@ -65,4 +79,3 @@ module.exports = router;
 
 
 
-module.exports = router;
