@@ -17,7 +17,34 @@ router.get('/', rejectUnauthenticated, (req, res) => {
         })
 });
 
-// add edibles for logged in user(admin) to the DB
+//GET SPECIFIC EDIBLE FROM DB FOR EDIT
+
+router.get('/:id', rejectUnauthenticated, (req, res) => {
+    const query = `SELECT * FROM "edible_db" WHERE "id" =$1;`
+
+    pool.query(query,[req.params.id])
+        .then((results) => res.send(results.rows))
+        .catch((err) => {
+            console.log('Error in EDIBLE GET', err);
+        })
+});
+
+
+
+router.put('/:id', rejectUnauthenticated, (req, res) => {
+    const edit = req.body
+    const query = `UPDATE "edible_db" SET  "edible" = $1, "description" = $2, "season" = $3,
+    "location" = $4, "image" = $5 WHERE "id" = $6;`;
+
+    const values = [ edit.edible, edit.description, edit.season, edit.location, edit.image, req.params.id]
+    pool.query(query,values)
+    .then(result=>{
+        res.sendStatus(200);
+    }).catch(error =>{
+        console.log('error',error);
+        
+    })
+});
 
 
 router.post('/', rejectUnauthenticated, (req, res) => {

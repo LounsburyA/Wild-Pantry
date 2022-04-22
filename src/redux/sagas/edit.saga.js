@@ -17,7 +17,7 @@ try {
     yield put({ type: 'SET_EDIT', payload: response.data[0] });
 }
 catch (error) {
-    console.log(' GET in edit saga is failing...cause it is a poop face', error);
+    console.log(' GET in edit saga is failing', error);
 
 }
 }
