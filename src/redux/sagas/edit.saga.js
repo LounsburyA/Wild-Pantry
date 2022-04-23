@@ -4,14 +4,7 @@ import { put, takeEvery } from 'redux-saga/effects';
 
 function* getEditJournal(action) {
 
-//     try {
-//         const editJournal = yield axios.get(`/journal/${action.payload}`)
-//         yield put({ type: 'GET_EDIT_JOURNAL', payload: editJournal.data[0] })
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-// need to add new get route to get 1 item
+
 try {
     const response = yield axios.get(`/api/journal/${action.payload}`);
     yield put({ type: 'SET_EDIT', payload: response.data[0] });

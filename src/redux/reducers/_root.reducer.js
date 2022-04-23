@@ -4,7 +4,7 @@ import user from './user.reducer';
 import edible from './edible.reducer';
 import journal from './journal.reducer';
 import editJournal from './edit.reducer';
-
+import editPantryReducer from './editpantry.reducer';
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
 // This is imported in index.js as rootSaga
@@ -16,7 +16,8 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   edible,
   journal,
-  editJournal
+  editJournal,
+  editPantryReducer
 });
 
 export default rootReducer;

@@ -5,27 +5,34 @@ import { useEffect } from 'react';
 
 
 
+
 function EdibleItem({ item }) {
     useEffect(() => {
         dispatch({ type: 'FETCH_EDIBLE' });
     }, []);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const user = useSelector(store => store.user);
-    
-// displays info for edibles in main pantry
+    const toEditPantry = () => {
+        dispatch({ type: 'SEND_EDIBLE,', payload: item })
+        // history.push(`/pantryedit/${item.id}`)
+    }
+
+    // displays info for edibles in main pantry
     return (
         <div>
 
             <>
-                <img src={item.image} height ="200px"/>
+                <img src={item.image} height="200px" />
                 <div>Name:{item.edible}</div>
                 <div>Description:{item.description}</div>
                 <div>Season:{item.season}</div>
                 <div>Location:{item.location}</div>
-                <button>Edit</button>
+
                 <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
                 >Delete</button>
+                <button onClick={toEditPantry}>Edit</button>
             </>
         </div>
     )
