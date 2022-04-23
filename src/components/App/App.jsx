@@ -24,6 +24,7 @@ import EdibleFormPage from '../EdibleFormPage/EdibleFormPage';
 import JournalListPage from '../JournalListPage/JournalListPage';
 import JournalFormPage from '../JournalFormPage/JournalFormPage';
 import EditUserForm from '../EditFormPage/EditFormPage';
+import PantryEditPage from '../PantryEditPage/PantryEditPage';
 import './App.css';
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
           </ProtectedRoute>
           {/* edible list page */}
           <ProtectedRoute
-            exact
+            // exact
             path="/edible">
             <EdibleListPage />
 
@@ -83,15 +84,24 @@ function App() {
             exact
             path="/journal">
             <JournalListPage />
-
           </ProtectedRoute>
+          
+
           {/* journal form page */}
           <ProtectedRoute
             exact
             path="/editform/:id">
             < EditUserForm/>
-
           </ProtectedRoute>
+
+
+          {/* pantry edit route */}
+          <ProtectedRoute
+            exact
+            path="/editpantry/:id">
+            < PantryEditPage/>
+          </ProtectedRoute>
+
 
           <ProtectedRoute
             exact

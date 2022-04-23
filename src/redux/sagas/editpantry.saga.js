@@ -7,7 +7,7 @@ function* getEditPantry(action) {
 
 try {
     const response = yield axios.get(`/api/edible/${action.payload}`);
-    yield put({ type: 'SET_PANTRYEDIT', payload: response.data[0] });
+    yield put({ type: 'SET_PANTRY', payload: response.data[0] });
 }
 catch (error) {
     console.log(' GET in editpanty saga is failing', error);
@@ -17,7 +17,7 @@ catch (error) {
 
 function* updatePantry(action) {
     try {
-        console.log('update journal action payload', action.payload);
+        console.log('update EDIBLE action payload', action.payload);
         yield axios.put (`/api/edible/${action.payload.id}`, action.payload)
         yield put ({type: 'FETCH_EDIBLE', payload: action.payload})
     } catch (error) {

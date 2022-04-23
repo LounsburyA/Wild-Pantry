@@ -17,18 +17,18 @@ function PantryEditPage() {
     }, [id])
 
 // MAY NOT NEED THIS USEEFFECT
-    const handleChange = (event, property) => {
+    const theChange = (event, property) => {
         dispatch({
-            type: 'EDIT_PANTRYCHANGE',
+            type: 'EDIT_PANTRY',
             payload: { property: property, value: event.target.value }
         })
     }
-const handleSubmit = (event) => {
+const theSubmit = (event) => {
     event.preventDefault();
 console.log('submit clicked');
     dispatch({ type: 'UPDATE_PANTRY', payload: editPantry })
-    dispatch({ type: 'CLEAR_PANTRYEDIT' });
-   // history.push('/journal')
+    //dispatch({ type: 'CLEAR_PANTRY' });
+    history.push('/edible')
 
 }
 
@@ -36,36 +36,36 @@ console.log('submit clicked');
 
     return (
         <>
-            <form action="submit" onSubmit={handleSubmit}>
+            <form action="submit" onSubmit={theSubmit}>
                 <input
                     placeholder="Picture URL"
                     type="text"
                     value={editPantry.image}
-                    onChange={(event) => handleChange(event, 'image')}
+                    onChange={(event) => theChange(event, 'image')}
                 />
                 <input
                     placeholder="new edible name"
                     type="text"
                     value={editPantry.edible}
-                    onChange={(event) => handleChange(event, 'edible')}
+                    onChange={(event) => theChange(event, 'edible')}
                 />
                 <input
                     placeholder="description"
                     type="text"
                     value={editPantry.description}
-                    onChange={(event) => handleChange(event, 'description')}
+                    onChange={(event) => theChange(event, 'description')}
                 />
                 <input
                     placeholder="season"
                     type="text"
                     value={editPantry.season}
-                    onChange={(event) => handleChange(event, 'season')}
+                    onChange={(event) => theChange(event, 'season')}
                 />
                 <input
                     placeholder="location"
                     type="text"
                     value={editPantry.location}
-                    onChange={(event) => handleChange(event, 'location')}
+                    onChange={(event) => theChange(event, 'location')}
                 />
 
 

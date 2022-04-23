@@ -14,9 +14,10 @@ function EdibleItem({ item }) {
     const history = useHistory();
 
     const user = useSelector(store => store.user);
+
     const toEditPantry = () => {
-        dispatch({ type: 'SEND_EDIBLE,', payload: item })
-        // history.push(`/pantryedit/${item.id}`)
+        dispatch({ type: 'SEND_EDIBLE', payload: item })
+        history.push(`/editpantry/${item.id}`)
     }
 
     // displays info for edibles in main pantry
