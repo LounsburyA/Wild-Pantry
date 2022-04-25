@@ -26,7 +26,7 @@ function JournalFormPage() {
         history.push('/journal')
     }
     const toPantry = () =>{
-        history.push('/edible')
+        history.push('/pantry')
     }
 
     return (

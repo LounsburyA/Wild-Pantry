@@ -12,7 +12,7 @@ function JournalListPage() {
     const history = useHistory();
 
     const toPantry = () =>{
-        history.push('/edible')
+        history.push('/pantry')
     }
 
     const toJournalForm = ()=>{
@@ -31,7 +31,7 @@ function JournalListPage() {
             </ul>
         </div>
         <button onClick = {toPantry}>The Pantry</button>
-        <button onClick = {toJournalForm}>Add to Your Pantry</button>
+        <button onClick = {toJournalForm}>Make Journal Entry</button>
         </>
     )
 }

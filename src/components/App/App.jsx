@@ -67,7 +67,7 @@ function App() {
           {/* edible list page */}
           <ProtectedRoute
             // exact
-            path="/edible">
+            path="/pantry">
             <EdibleListPage />
 
           </ProtectedRoute>

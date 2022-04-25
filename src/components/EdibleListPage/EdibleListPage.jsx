@@ -35,9 +35,10 @@ function EdibleListPage() {
                     />))}
                 </div>
             </div>
-            <button onClick = {toPantryForm}>Add to Pantry</button>
-            <button onClick = {toJournalForm}>Add to Your Pantry</button>
-            <button onClick = {toJournal}>Your Pantry</button>
+            {user.clearance > 2 ?
+            <button onClick = {toPantryForm}>Add to Pantry</button>:''}
+            <button onClick = {toJournalForm}> Make Journal Entry</button>
+            <button onClick = {toJournal}>{user.username}'s' Journal</button>
         </>
     )
 }

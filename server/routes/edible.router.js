@@ -1,7 +1,8 @@
 const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
-const { rejectUnauthenticated } = require('../modules/authentication-middleware')
+const { rejectUnauthenticated } = require('../modules/authentication-middleware');
+const { user } = require('pg/lib/defaults');
 
 
 
@@ -22,7 +23,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.get('/:id', rejectUnauthenticated, (req, res) => {
     const query = `SELECT * FROM "edibles_db" WHERE "id" =$1;`
 
-    pool.query(query,[req.params.id])
+    pool.query(query, [req.params.id])
         .then((results) => res.send(results.rows))
         .catch((err) => {
             console.log('Error in EDIBLE GET', err);
@@ -32,18 +33,21 @@ router.get('/:id', rejectUnauthenticated, (req, res) => {
 
 
 router.put('/:id', rejectUnauthenticated, (req, res) => {
-    const update = req.body
-    const query = `UPDATE "edibles_db" SET  "edible" = $1, "description" = $2, "season" = $3,
+    if (req.user.clearance > 1) {
+
+        const update = req.body
+        const query = `UPDATE "edibles_db" SET  "edible" = $1, "description" = $2, "season" = $3,
     "location" = $4, "image" = $5 WHERE "id" = $6;`;
 
-    const values = [ update.edible, update.description, update.season, update.location, update.image, req.params.id]
-    pool.query(query,values)
-    .then(result=>{
-        res.sendStatus(200);
-    }).catch(error =>{
-        console.log('error',error);
-        
-    })
+        const values = [update.edible, update.description, update.season, update.location, update.image, req.params.id]
+        pool.query(query, values)
+            .then(result => {
+                res.sendStatus(200);
+            }).catch(error => {
+                console.log('error', error);
+
+            })
+    }
 });
 
 
@@ -81,6 +85,6 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
 //  Update edible if it's something the logged in user(admin) added
 
 router.put('/:id', (req, res) => {
-  // endpoint functionality
+    // endpoint functionality
 });
 module.exports = router;

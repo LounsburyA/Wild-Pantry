@@ -28,7 +28,7 @@ const theSubmit = (event) => {
 console.log('submit clicked');
     dispatch({ type: 'UPDATE_PANTRY', payload: editPantry })
     //dispatch({ type: 'CLEAR_PANTRY' });
-    history.push('/edible')
+    history.push('/pantry')
 
 }
 

@@ -23,7 +23,7 @@ function EdibleFormPage() {
     }
 
     const toPantry = () =>{
-        history.push('/edible')
+        history.push('/pantry')
     }
 
 
