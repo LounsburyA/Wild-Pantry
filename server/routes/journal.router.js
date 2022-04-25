@@ -8,17 +8,18 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
 
 
 router.get('/', rejectUnauthenticated, (req, res) => {
-    const query = `SELECT * FROM "user_finds";`
-  
-    pool.query(query)
+    const query = `SELECT * FROM "user_finds" WHERE "user_id" = $1;`
+
+    pool.query(query,[req.user.id])
         .then((results) => res.send(results.rows))
         .catch((err) => {
-            console.log('Error in taco taco taco GET', err);
+            console.log('Error in journal GET', err);
         })
 });
 
 
 router.get('/:id', rejectUnauthenticated, (req, res) => {
+    
     const query = `SELECT * FROM "user_finds" WHERE "id" =$1;`
 
     pool.query(query,[req.params.id])
@@ -36,7 +37,7 @@ router.post('/', rejectUnauthenticated, (req, res) => {
     const query = `INSERT INTO "user_finds" ("item_name", "description", "season", "location", "image", "user_id")
                     VALUES ($1, $2, $3, $4, $5, $6);`;
 
-    const values = [req.body.edible, req.body.description, req.body.season, req.body.location, req.body.image, req.user_id]
+    const values = [req.body.edible, req.body.description, req.body.season, req.body.location, req.body.image, req.user.id]
     pool.query(query, values)
         .then(result => {
             res.sendStatus(201);

@@ -22,7 +22,7 @@ function JournalListPage() {
     return (
         <>
         <div className="container">
-            <h1>Your Pantry</h1>
+            <h1>Your Journal</h1>
             <ul>{journal.map(item=>(
                 <JournalItem key={item.id}
                 item ={item}

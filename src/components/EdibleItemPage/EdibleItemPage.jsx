@@ -30,10 +30,11 @@ function EdibleItem({ item }) {
                 <div>Description:{item.description}</div>
                 <div>Season:{item.season}</div>
                 <div>Location:{item.location}</div>
-
+                    {user.clearance > 2 ?
                 <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
-                >Delete</button>
-                <button onClick={toEditPantry}>Edit</button>
+                >Delete</button>: ''}
+                {user.clearance > 2 ?
+                <button onClick={toEditPantry}>Edit</button>:''}
             </>
         </div>
     )
