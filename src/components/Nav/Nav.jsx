@@ -39,7 +39,9 @@ function Nav() {
             <Link className="navLink" to="/journalform">
               User Journal Entry
             </Link>
-          
+          <Link className='navLink' to =  "/editpantry/:id">
+            Edit Pantry
+          </Link>
 
             <LogOutButton className="navLink" />
           </>

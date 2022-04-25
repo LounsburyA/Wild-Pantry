@@ -11,7 +11,7 @@ function PantryEditPage() {
     const editPantry = useSelector(store => store.editPantry);
 
 
-    // MAY NOT NEED THIS USEEFFECT
+    // MAY NOT NEED THIS USE EFFECT
     useEffect(() => {
         dispatch({ type: 'GET_EDIT_PANTRY', payload: id })
     }, [id])

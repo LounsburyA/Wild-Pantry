@@ -47,7 +47,7 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
                 console.log('error', error);
 
             })
-    }
+    }else {res.sendStatus(403);}
 });
 
 

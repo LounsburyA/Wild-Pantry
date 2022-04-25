@@ -18,7 +18,9 @@ catch (error) {
 function* updatePantry(action) {
     try {
         console.log('update EDIBLE action payload', action.payload);
+        
         yield axios.put (`/api/edible/${action.payload.id}`, action.payload)
+        
         yield put ({type: 'FETCH_EDIBLE', payload: action.payload})
     } catch (error) {
         console.log(error);
