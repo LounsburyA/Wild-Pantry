@@ -7,7 +7,7 @@ body,
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 10px;
-  background-color:   #dbceb0;
+  background-color: #dbceb0;
   color: #c1502e;
 }
 
@@ -23,7 +23,7 @@ Container
 .container {
   padding: 20px;
   text-align: center;
-  
+
 }
 
 
@@ -38,8 +38,8 @@ Button
   border-color: #014041;
   border-width: 1px 1px 3px;
   border-radius: 4px;
-  background-color:#587e76;
-  color:#ff7b25;
+  background-color: #587e76;
+  color: #ff7b25;
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
@@ -120,9 +120,18 @@ input {
   margin-bottom: 10px;
 }
 
-.formtitle{
-  color:#ff7b25;
+.formTitle {
+  color: #ff7b25;
+  text-align: center;
+  font-size: 2em;
 }
-.edit{
+
+.formTitle span {
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+  background-color: #587e76;
+}
+
+.edit {
   background-color: white;
 }

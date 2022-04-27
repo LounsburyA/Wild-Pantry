@@ -33,7 +33,7 @@ function EdibleFormPage() {
 
     return (
         <>
-            <h1 className='formtitle'>Add to the Pantry</h1>
+            <h1 className='formTitle'><span>Add to the Pantry</span></h1>
 
             <form noValidate autoComplete='off' onSubmit={addEdible} className='form' >
                 <TextField

@@ -23,7 +23,7 @@ function JournalListPage() {
     return (
         <>
         <div className="container">
-            <h1>{user.username}'s Journal</h1>
+            <h1 className="formTitle"><span>{user.username}'s Journal</span></h1>
             <ul>{journal.map(item=>(
                 <JournalItem key={item.id}
                 item ={item}

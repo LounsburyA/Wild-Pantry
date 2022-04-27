@@ -38,7 +38,7 @@ console.log('submit clicked');
 console.log(editJournal,    'this is what we are looking for');
     return (
         <>
-        <h1>Edit {user.username}'s Journal Entry </h1>
+        <h1 className="formTitle"> <span>Edit {user.username}'s Journal Entry </span></h1>
             <form action="submit" onSubmit={handleSubmit}>
                 <TextField
                     label="Picture URL"

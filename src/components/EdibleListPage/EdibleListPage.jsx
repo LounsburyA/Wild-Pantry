@@ -28,7 +28,7 @@ function EdibleListPage() {
     return (
         <>
             <div className="container">
-                <h1 className="formtitle">Wild Pantry</h1>
+                <h1 className="formTitle"><span>Wild Pantry</span></h1>
                 <div>{edible.map(item => (
                     <EdibleItem key={item.id}
                         item={item}

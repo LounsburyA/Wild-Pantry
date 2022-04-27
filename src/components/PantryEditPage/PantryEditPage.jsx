@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
-import { TextField } from '@mui/material';
+import { Grid, TextField } from '@mui/material';
 
 function PantryEditPage() {
 
     const dispatch = useDispatch();
-    const {id} = useParams();
+    const { id } = useParams();
     const history = useHistory();
     const editPantry = useSelector(store => store.editPantry);
 
@@ -16,62 +16,76 @@ function PantryEditPage() {
         dispatch({ type: 'GET_EDIT_PANTRY', payload: id })
     }, [id])
 
-// MAY NOT NEED THIS USEEFFECT
+    // MAY NOT NEED THIS USEEFFECT
     const theChange = (event, property) => {
         dispatch({
             type: 'EDIT_PANTRY',
             payload: { property: property, value: event.target.value }
         })
     }
-const theSubmit = (event) => {
-    event.preventDefault();
-console.log('submit clicked');
-    dispatch({ type: 'UPDATE_PANTRY', payload: editPantry })
-    //dispatch({ type: 'CLEAR_PANTRY' });
-    history.push('/pantry')
+    const theSubmit = (event) => {
+        event.preventDefault();
+        console.log('submit clicked');
+        dispatch({ type: 'UPDATE_PANTRY', payload: editPantry })
+        //dispatch({ type: 'CLEAR_PANTRY' });
+        history.push('/pantry')
 
-}
+    }
 
 
 
     return (
         <>
-        <h1>Edit Pantry Entry</h1>
-            <form action="submit" onSubmit={theSubmit} >
-                <TextField
-                    label="Picture URL"
-                    type="text"
-                    value={editPantry.image}
-                    onChange={(event) => theChange(event, 'image')}
-                />
-                <TextField
-                    label="new edible name"
-                    type="text"
-                    value={editPantry.edible}
-                    onChange={(event) => theChange(event, 'edible')}
-                />
-                <TextField
-                    label="description"
-                    type="text"
-                    value={editPantry.description}
-                    onChange={(event) => theChange(event, 'description')}
-                />
-                <TextField
-                    label="season"
-                    type="text"
-                    value={editPantry.season}
-                    onChange={(event) => theChange(event, 'season')}
-                />
-                <TextField
-                    label="location"
-                    type="text"
-                    value={editPantry.location}
-                    onChange={(event) => theChange(event, 'location')}
-                />
+            <h1 className='formTitle'><span>Edit Pantry Entry</span></h1>
+            <Grid container justifyContent="center">
+                <form action="submit" onSubmit={theSubmit} >
+                    <div>
+                        <TextField
+                            label="Picture URL"
+                            type="text"
+                            value={editPantry.image}
+                            onChange={(event) => theChange(event, 'image')}
+                        />
+                    </div>
+                    <div>
+                        <TextField
+                            label="new edible name"
+                            type="text"
+                            value={editPantry.edible}
+                            onChange={(event) => theChange(event, 'edible')}
+                        />
+                    </div>
 
+                    <div>
+                        <TextField
+                            label="description"
+                            type="text"
+                            value={editPantry.description}
+                            onChange={(event) => theChange(event, 'description')}
+                        />
+                    </div>
 
-                <button className='btn' type="submit">Update Entry</button>
-            </form>
+                    <div>
+                        <TextField
+                            label="season"
+                            type="text"
+                            value={editPantry.season}
+                            onChange={(event) => theChange(event, 'season')}
+                        />
+                    </div>
+
+                    <div>
+                        <TextField
+                            label="location"
+                            type="text"
+                            value={editPantry.location}
+                            onChange={(event) => theChange(event, 'location')}
+                        />
+                    </div>
+
+                    <button className='btn' type="submit">Update Entry</button>
+                </form>
+            </Grid>
         </>
     )
 }

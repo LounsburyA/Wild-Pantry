@@ -31,7 +31,7 @@ function JournalFormPage() {
 
     return (
         <>
-            <h1 className='formtitle'>Make a Journal Entry</h1>
+            <h1 className='formTitle'><span>Make a Journal Entry</span></h1>
             <form noValidate autoComplete='off' onSubmit={addEdible}>
                 <TextField
                     label="Picture URL"
