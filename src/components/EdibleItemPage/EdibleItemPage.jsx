@@ -32,9 +32,9 @@ function EdibleItem({ item }) {
                 <div>Location:{item.location}</div>
                     {user.clearance > 2 ?
                 <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
-                >Delete</button>: ''}
+                className='btn'>Delete</button>: ''}
                 {user.clearance > 2 ?
-                <button onClick={toEditPantry}>Edit</button>:''}
+                <button onClick={toEditPantry} className='btn'>Edit</button>:''}
             </>
         </div>
     )

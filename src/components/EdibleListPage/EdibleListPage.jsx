@@ -12,14 +12,14 @@ function EdibleListPage() {
     const user = useSelector(store => store.user);
     const history = useHistory();
 
-    const toPantryForm = ()=>{
+    const toPantryForm = () => {
         history.push('/edibleform')
     }
 
-    const toJournalForm = ()=>{
+    const toJournalForm = () => {
         history.push('/journalform')
     }
-    const toJournal = ()=>{
+    const toJournal = () => {
         history.push('/journal')
     }
 
@@ -28,17 +28,21 @@ function EdibleListPage() {
     return (
         <>
             <div className="container">
-                <h1>Wild Pantry</h1>
+                <h1 className="formtitle">Wild Pantry</h1>
                 <div>{edible.map(item => (
                     <EdibleItem key={item.id}
                         item={item}
                     />))}
                 </div>
             </div>
-            {user.clearance > 2 ?
-            <button onClick = {toPantryForm}>Add to Pantry</button>:''}
-            <button onClick = {toJournalForm}> Make Journal Entry</button>
-            <button onClick = {toJournal}>{user.username}'s' Journal</button>
+            <div className="navpantry">
+                {user.clearance > 2 ?
+                    <button onClick={toPantryForm} className='btn'>Add to Pantry</button> : ''}
+
+                <button onClick={toJournalForm} className='btn'> Make Journal Entry</button>
+
+                <button onClick={toJournal} className='btn'>{user.username}'s' Journal</button>
+            </div>
         </>
     )
 }

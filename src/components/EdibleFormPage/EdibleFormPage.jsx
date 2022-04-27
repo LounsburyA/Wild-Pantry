@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
+import { TextField, Container, Grid } from '@mui/material';
+
+
 
 
 function EdibleFormPage() {
@@ -22,7 +25,7 @@ function EdibleFormPage() {
         setNewPicture(''); setNewEdible(''); setNewDescription(''); setNewSeason(''); setNewLocation('');
     }
 
-    const toPantry = () =>{
+    const toPantry = () => {
         history.push('/pantry')
     }
 
@@ -30,42 +33,59 @@ function EdibleFormPage() {
 
     return (
         <>
-            <form onSubmit={addEdible}>
-                <input
-                    placeholder="Picture URL"
+            <h1 className='formtitle'>Add to the Pantry</h1>
+
+            <form noValidate autoComplete='off' onSubmit={addEdible} className='form' >
+                <TextField
+                    label="Picture URL"
+                    variant='outlined'
                     type="text"
                     value={newPicture}
                     onChange={(event) => setNewPicture(event.target.value)}
+                    className='textfield'
                 />
-                <input
-                    placeholder="new edible name"
+
+                <TextField
+                    label="new edible name"
+                    variant='outlined'
                     type="text"
                     value={newEdible}
                     onChange={(event) => setNewEdible(event.target.value)}
+                    className='form'
                 />
-                <input
-                    placeholder="description"
+
+                <TextField
+                    label="description"
+                    variant='outlined'
                     type="text"
                     value={newDescription}
                     onChange={(event) => setNewDescription(event.target.value)}
+                    className='form'
                 />
-                <input
-                    placeholder="season"
+                <TextField
+                    label="season"
+                    variant='outlined'
                     type="text"
                     value={newSeason}
                     onChange={(event) => setNewSeason(event.target.value)}
+                    className='form'
                 />
-                <input
-                    placeholder="location"
+                <TextField
+                    variant='outlined'
+                    label="location"
                     type="text"
                     value={newLocation}
                     onChange={(event) => setNewLocation(event.target.value)}
+                    className='form'
                 />
-
-
-                <button type="submit">Add Item</button>
+                <button type="submit" className='btn'>Add Item</button>
             </form>
-            <button onClick = {toPantry}>The Pantry</button>
+
+
+
+
+            <button onClick={toPantry} className='btn'>The Pantry</button>
+
         </>
     )
 }

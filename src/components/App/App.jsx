@@ -26,6 +26,16 @@ import JournalFormPage from '../JournalFormPage/JournalFormPage';
 import EditUserForm from '../EditFormPage/EditFormPage';
 import PantryEditPage from '../PantryEditPage/PantryEditPage';
 import './App.css';
+import { createTheme, ThemeProvider, themeProvider } from '@mui/material';
+
+const theme = createTheme ({
+  palette:{
+    primary: {
+      main:'#00695c'
+    }
+  }
+})
+
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +47,7 @@ function App() {
   }, [dispatch]);
 
   return (
+    <ThemeProvider theme = {theme}>
     <Router>
       <div>
         <Nav />
@@ -162,6 +173,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 

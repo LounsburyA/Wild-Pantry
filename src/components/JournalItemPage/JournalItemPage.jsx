@@ -30,8 +30,8 @@ function JournalItem({ item }) {
                 <div>Season: {item.season}</div>
                 <div>Location: {item.location}</div>
                 <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
-                >Delete</button>
-                <button onClick ={toEdit}>Edit</button>
+                className='btn'>Delete</button>
+                <button onClick ={toEdit} className='btn'>Edit</button>
             </>
         </div>
     )

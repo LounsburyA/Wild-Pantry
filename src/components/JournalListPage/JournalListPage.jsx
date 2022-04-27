@@ -9,6 +9,7 @@ function JournalListPage() {
     }, []);
     const dispatch = useDispatch();
     const journal = useSelector(store => store.journal)
+    const user = useSelector((store) => store.user);
     const history = useHistory();
 
     const toPantry = () =>{
@@ -22,7 +23,7 @@ function JournalListPage() {
     return (
         <>
         <div className="container">
-            <h1>Your Journal</h1>
+            <h1>{user.username}'s Journal</h1>
             <ul>{journal.map(item=>(
                 <JournalItem key={item.id}
                 item ={item}
@@ -30,8 +31,8 @@ function JournalListPage() {
                 
             </ul>
         </div>
-        <button onClick = {toPantry}>The Pantry</button>
-        <button onClick = {toJournalForm}>Make Journal Entry</button>
+        <button onClick = {toPantry} className='btn'>The Pantry</button>
+        <button onClick = {toJournalForm} className='btn'>Make Journal Entry</button>
         </>
     )
 }

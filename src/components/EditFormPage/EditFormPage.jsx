@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
+import { TextField } from '@mui/material';
 
 
 function EditUserForm() {
@@ -9,6 +10,7 @@ function EditUserForm() {
     const {id} = useParams();
     const history = useHistory();
     const editJournal = useSelector(store => store.editJournal);
+    const user = useSelector(store => store.user)
 
 
     // MAY NOT NEED THIS USEEFFECT
@@ -36,40 +38,41 @@ console.log('submit clicked');
 console.log(editJournal,    'this is what we are looking for');
     return (
         <>
+        <h1>Edit {user.username}'s Journal Entry </h1>
             <form action="submit" onSubmit={handleSubmit}>
-                <input
-                    placeholder="Picture URL"
+                <TextField
+                    label="Picture URL"
                     type="text"
                     value={editJournal.image}
                     onChange={(event) => handleChange(event, 'image')}
                 />
-                <input
-                    placeholder="new edible name"
+                <TextField
+                    label="new edible name"
                     type="text"
                     value={editJournal.item_name}
                     onChange={(event) => handleChange(event, 'item_name')}
                 />
-                <input
-                    placeholder="description"
+                <TextField
+                    label="description"
                     type="text"
                     value={editJournal.description}
                     onChange={(event) => handleChange(event, 'description')}
                 />
-                <input
-                    placeholder="season"
+                <TextField
+                    label="season"
                     type="text"
                     value={editJournal.season}
                     onChange={(event) => handleChange(event, 'season')}
                 />
-                <input
-                    placeholder="location"
+                <TextField
+                    label="location"
                     type="text"
                     value={editJournal.location}
                     onChange={(event) => handleChange(event, 'location')}
                 />
 
 
-                <input type="submit"/>
+                <button className='btn' type="submit">Update Entry </button>
             </form>
         </>
     )

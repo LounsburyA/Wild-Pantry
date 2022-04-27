@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
-
+import { TextField } from '@mui/material';
 
 function PantryEditPage() {
 
@@ -36,40 +36,41 @@ console.log('submit clicked');
 
     return (
         <>
-            <form action="submit" onSubmit={theSubmit}>
-                <input
-                    placeholder="Picture URL"
+        <h1>Edit Pantry Entry</h1>
+            <form action="submit" onSubmit={theSubmit} >
+                <TextField
+                    label="Picture URL"
                     type="text"
                     value={editPantry.image}
                     onChange={(event) => theChange(event, 'image')}
                 />
-                <input
-                    placeholder="new edible name"
+                <TextField
+                    label="new edible name"
                     type="text"
                     value={editPantry.edible}
                     onChange={(event) => theChange(event, 'edible')}
                 />
-                <input
-                    placeholder="description"
+                <TextField
+                    label="description"
                     type="text"
                     value={editPantry.description}
                     onChange={(event) => theChange(event, 'description')}
                 />
-                <input
-                    placeholder="season"
+                <TextField
+                    label="season"
                     type="text"
                     value={editPantry.season}
                     onChange={(event) => theChange(event, 'season')}
                 />
-                <input
-                    placeholder="location"
+                <TextField
+                    label="location"
                     type="text"
                     value={editPantry.location}
                     onChange={(event) => theChange(event, 'location')}
                 />
 
 
-                <input type="submit"/>
+                <button className='btn' type="submit">Update Entry</button>
             </form>
         </>
     )
