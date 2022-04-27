@@ -39,7 +39,7 @@ function PantryEditPage() {
             <h1 className='formTitle'><span>Edit Pantry Entry</span></h1>
             <Grid container justifyContent="center">
                 <form action="submit" onSubmit={theSubmit} >
-                    <div>
+                    <div className='formDiv'>
                         <TextField
                             label="Picture URL"
                             type="text"
@@ -47,7 +47,7 @@ function PantryEditPage() {
                             onChange={(event) => theChange(event, 'image')}
                         />
                     </div>
-                    <div>
+                    <div className='formDiv'>
                         <TextField
                             label="new edible name"
                             type="text"
@@ -56,7 +56,7 @@ function PantryEditPage() {
                         />
                     </div>
 
-                    <div>
+                    <div className='formDiv'>
                         <TextField
                             label="description"
                             type="text"
@@ -65,7 +65,7 @@ function PantryEditPage() {
                         />
                     </div>
 
-                    <div>
+                    <div className='formDiv'>
                         <TextField
                             label="season"
                             type="text"
@@ -74,7 +74,7 @@ function PantryEditPage() {
                         />
                     </div>
 
-                    <div>
+                    <div className='formDiv'>
                         <TextField
                             label="location"
                             type="text"

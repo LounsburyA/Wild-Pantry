@@ -34,53 +34,68 @@ function EdibleFormPage() {
     return (
         <>
             <h1 className='formTitle'><span>Add to the Pantry</span></h1>
+            <Grid container justifyContent="center">
+                <form noValidate autoComplete='off' onSubmit={addEdible} className='form' >
 
-            <form noValidate autoComplete='off' onSubmit={addEdible} className='form' >
-                <TextField
-                    label="Picture URL"
-                    variant='outlined'
-                    type="text"
-                    value={newPicture}
-                    onChange={(event) => setNewPicture(event.target.value)}
-                    className='textfield'
-                />
+                    <div className='formDiv'>
+                        <TextField
+                            label="Picture URL"
+                            variant='outlined'
+                            type="text"
+                            value={newPicture}
+                            onChange={(event) => setNewPicture(event.target.value)}
 
-                <TextField
-                    label="new edible name"
-                    variant='outlined'
-                    type="text"
-                    value={newEdible}
-                    onChange={(event) => setNewEdible(event.target.value)}
-                    className='form'
-                />
+                        />
+                    </div>
 
-                <TextField
-                    label="description"
-                    variant='outlined'
-                    type="text"
-                    value={newDescription}
-                    onChange={(event) => setNewDescription(event.target.value)}
-                    className='form'
-                />
-                <TextField
-                    label="season"
-                    variant='outlined'
-                    type="text"
-                    value={newSeason}
-                    onChange={(event) => setNewSeason(event.target.value)}
-                    className='form'
-                />
-                <TextField
-                    variant='outlined'
-                    label="location"
-                    type="text"
-                    value={newLocation}
-                    onChange={(event) => setNewLocation(event.target.value)}
-                    className='form'
-                />
-                <button type="submit" className='btn'>Add Item</button>
-            </form>
+                    <div className='formDiv'>
+                        <TextField
+                            label="new edible name"
+                            variant='outlined'
+                            type="text"
+                            value={newEdible}
+                            onChange={(event) => setNewEdible(event.target.value)}
 
+                        />
+
+                    </div>
+
+                    <div className='formDiv'>
+                        <TextField
+                            label="description"
+                            variant='outlined'
+                            type="text"
+                            value={newDescription}
+                            onChange={(event) => setNewDescription(event.target.value)}
+
+                        />
+                    </div>
+
+                    <div className='formDiv'>
+                        <TextField
+                            label="season"
+                            variant='outlined'
+                            type="text"
+                            value={newSeason}
+                            onChange={(event) => setNewSeason(event.target.value)}
+
+                        />
+                    </div>
+
+                    <div className='formDiv'>
+                        <TextField
+                            variant='outlined'
+                            label="location"
+                            type="text"
+                            value={newLocation}
+                            onChange={(event) => setNewLocation(event.target.value)}
+                            
+                        />
+                    </div>
+
+                    <button type="submit" className='btn'>Add Item</button>
+                </form>
+            </Grid>
 
 
 
