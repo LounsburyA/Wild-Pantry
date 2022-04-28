@@ -81,12 +81,15 @@ function JournalFormPage() {
                             onChange={(event) => setNewLocation(event.target.value)}
                         />
                     </div>
-
-                    <button className='btn' type="submit">Add Item</button>
+                    <div className="navPantry">
+                        <button className='btn' type="submit">Add Item</button>
+                    </div>
                 </form>
             </Grid>
-            <button className='btn' onClick={toPantry}>The Pantry</button>
-            <button className='btn' onClick={toJournal}>Your Pantry</button>
+            <div className="navPantry">
+                <button className='btn' onClick={toPantry}>The Pantry</button>
+                <button className='btn' onClick={toJournal}>Your Pantry</button>
+            </div>
         </>
     )
 }

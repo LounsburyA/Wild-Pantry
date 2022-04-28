@@ -82,8 +82,9 @@ function PantryEditPage() {
                             onChange={(event) => theChange(event, 'location')}
                         />
                     </div>
-
-                    <button className='btn' type="submit">Update Entry</button>
+                    <div className="navPantry">
+                        <button className='btn' type="submit">Update Entry</button>
+                    </div>
                 </form>
             </Grid>
         </>

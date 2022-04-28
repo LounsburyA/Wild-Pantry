@@ -44,6 +44,8 @@ Button
   outline: 0;
   cursor: pointer;
   margin: 4px;
+  width:6em;
+  height: 3em;
 }
 
 .btn_sizeMin {
@@ -137,4 +139,14 @@ input {
 }
 .formDiv{
   margin: 1em;
+}
+.card {
+  color:#c1502e;
+  justify-content: center;
+}
+.navPantry{
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

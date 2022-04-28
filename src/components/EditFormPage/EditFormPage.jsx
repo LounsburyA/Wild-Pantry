@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
 import { TextField, Grid} from '@mui/material';
+import { lightBlue } from '@mui/material/colors';
 
 
 function EditUserForm() {
@@ -48,6 +49,7 @@ function EditUserForm() {
                         type="text"
                         value={editJournal.image}
                         onChange={(event) => handleChange(event, 'image')}
+                       // style={{backgroundColor: "lightBlue", color: "orange"}}
                     />
                 </div>
 
@@ -86,8 +88,9 @@ function EditUserForm() {
                         onChange={(event) => handleChange(event, 'location')}
                     />
                 </div>
-
+                <div className="navPantry">
                 <button className='btn' type="submit">Update Entry </button>
+                </div>
             </form>
             </Grid>
         </>

@@ -89,18 +89,19 @@ function EdibleFormPage() {
                             type="text"
                             value={newLocation}
                             onChange={(event) => setNewLocation(event.target.value)}
-                            
+
                         />
                     </div>
-
+                    <div className="navPantry">
                     <button type="submit" className='btn'>Add Item</button>
+                    </div>
                 </form>
             </Grid>
 
 
-
-            <button onClick={toPantry} className='btn'>The Pantry</button>
-
+            <div className="navPantry">
+                <button onClick={toPantry} className='btn'>The Pantry</button>
+            </div>
         </>
     )
 }
