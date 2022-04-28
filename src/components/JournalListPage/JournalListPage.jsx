@@ -50,7 +50,7 @@ function JournalListPage() {
             </div>
             <div className="navPantry">
                 <button onClick={toPantry} className='btn'>The Pantry</button>
-                <button onClick={toJournalForm} className='btn'>Make Journal Entry</button>
+                <button onClick={toJournalForm} className='btn'>Journal Entry</button>
             </div>
         </>
     )

@@ -39,12 +39,12 @@ Button
   border-width: 1px 1px 3px;
   border-radius: 4px;
   background-color: #587e76;
-  color: #ff7b25;
-  font-size: 1.1rem;
+  color: #ebc334;
+  font-size: 1em;
   outline: 0;
   cursor: pointer;
   margin: 4px;
-  width:6em;
+  width: 6em;
   height: 3em;
 }
 
@@ -123,7 +123,7 @@ input {
 }
 
 .formTitle {
-  color: #ff7b25;
+  color: #ebc334;
   text-align: center;
   font-size: 2em;
 }
@@ -145,8 +145,17 @@ input {
   justify-content: center;
 }
 .navPantry{
-  margin: 2em;
+  /* margin: 3em; */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: sticky;
+  bottom: 0px;;
+  align-self: flex-end;
+  background-color:black; */
+}
+
+.formJournal{
+  border: solid 1px #014041;
+  background-color: #e6e2d3;
 }

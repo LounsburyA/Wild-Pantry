@@ -21,6 +21,11 @@ function JournalFormPage() {
         })
         setNewPicture(''); setNewEdible(''); setNewDescription(''); setNewSeason(''); setNewLocation('');
     }
+    const dummyData = () => {
+
+        setNewEdible('Pheasants Back'); setNewDescription('Shelf mushroom with brown feathery appearance on its scaly cap');
+        setNewSeason('Spring'); setNewLocation('Dakota County');
+    }
 
     const toJournal = () => {
         history.push('/journal')
@@ -31,64 +36,67 @@ function JournalFormPage() {
 
     return (
         <>
-            <h1 className='formTitle'><span>Make a Journal Entry</span></h1>
+            <h1 className='formTitle'><span onClick={dummyData} >Journal Entry</span></h1>
+           
+                <Grid container justifyContent="center">
+                <div className='formJournal'>
+                    <form noValidate autoComplete='off' onSubmit={addEdible} >
 
-            <Grid container justifyContent="center">
-                <form noValidate autoComplete='off' onSubmit={addEdible}>
 
+                        <div className='formDiv'>
+                            <TextField
+                                label="Picture URL"
+                                type="text"
+                                value={newPicture}
+                                onChange={(event) => setNewPicture(event.target.value)}
+                            />
+                        </div>
 
-                    <div className='formDiv'>
-                        <TextField
-                            label="Picture URL"
-                            type="text"
-                            value={newPicture}
-                            onChange={(event) => setNewPicture(event.target.value)}
-                        />
+                        <div className='formDiv'>
+                            <TextField
+                                label="new edible name"
+                                type="text"
+                                value={newEdible}
+                                onChange={(event) => setNewEdible(event.target.value)}
+                            />
+                        </div>
+
+                        <div className='formDiv'>
+                            <TextField
+                                label="description"
+                                type="text"
+                                value={newDescription}
+                                onChange={(event) => setNewDescription(event.target.value)}
+                            />
+                        </div>
+
+                        <div className='formDiv'>
+                            <TextField
+                                label="season"
+                                type="text"
+                                value={newSeason}
+                                onChange={(event) => setNewSeason(event.target.value)}
+                            />
+                        </div>
+
+                        <div className='formDiv'>
+                            <TextField
+                                label="location"
+                                type="text"
+                                value={newLocation}
+                                onChange={(event) => setNewLocation(event.target.value)}
+                            />
+                        </div>
+                        <div className="navPantry">
+                            <button className='btn' type="submit">Add Item</button>
+                        </div>
+                    </form>
                     </div>
-
-                    <div className='formDiv'>
-                        <TextField
-                            label="new edible name"
-                            type="text"
-                            value={newEdible}
-                            onChange={(event) => setNewEdible(event.target.value)}
-                        />
-                    </div>
-
-                    <div className='formDiv'>
-                        <TextField
-                            label="description"
-                            type="text"
-                            value={newDescription}
-                            onChange={(event) => setNewDescription(event.target.value)}
-                        />
-                    </div>
-
-                    <div className='formDiv'>
-                        <TextField
-                            label="season"
-                            type="text"
-                            value={newSeason}
-                            onChange={(event) => setNewSeason(event.target.value)}
-                        />
-                    </div>
-
-                    <div className='formDiv'>
-                        <TextField
-                            label="location"
-                            type="text"
-                            value={newLocation}
-                            onChange={(event) => setNewLocation(event.target.value)}
-                        />
-                    </div>
-                    <div className="navPantry">
-                        <button className='btn' type="submit">Add Item</button>
-                    </div>
-                </form>
-            </Grid>
+                </Grid>
+          
             <div className="navPantry">
                 <button className='btn' onClick={toPantry}>The Pantry</button>
-                <button className='btn' onClick={toJournal}>Your Pantry</button>
+                <button className='btn' onClick={toJournal}>Your Journal</button>
             </div>
         </>
     )

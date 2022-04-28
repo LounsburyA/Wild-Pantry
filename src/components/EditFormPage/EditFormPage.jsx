@@ -40,6 +40,7 @@ function EditUserForm() {
         <>
             <h1 className="formTitle"> <span>Edit {user.username}'s Journal Entry </span></h1>
             <Grid container justifyContent= "center">
+            <div className='formJournal'>
             <form  noValidate autoComplete= "off"onSubmit={handleSubmit} className ='Form'>
 
 
@@ -92,6 +93,7 @@ function EditUserForm() {
                 <button className='btn' type="submit">Update Entry </button>
                 </div>
             </form>
+            </div>
             </Grid>
         </>
     )

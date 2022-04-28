@@ -30,6 +30,9 @@ function EdibleItem({ item }) {
 
     // displays info for edibles in main pantry
     return (
+        //pre mui addition code
+
+
         // <div className='container'>
 
         //     <>

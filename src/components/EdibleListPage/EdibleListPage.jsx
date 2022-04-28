@@ -27,6 +27,8 @@ function EdibleListPage() {
 
 
     return (
+        // code pre adding material ui keeping for reference 
+        // trying out different styling  options
         // <>
         //     <div className="list">
         //         <h1 className="formTitle"><span>Wild Pantry</span></h1>

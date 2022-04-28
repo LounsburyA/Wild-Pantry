@@ -38,6 +38,7 @@ function PantryEditPage() {
         <>
             <h1 className='formTitle'><span>Edit Pantry Entry</span></h1>
             <Grid container justifyContent="center">
+            <div className='formJournal'>
                 <form action="submit" onSubmit={theSubmit} >
                     <div className='formDiv'>
                         <TextField
@@ -86,6 +87,7 @@ function PantryEditPage() {
                         <button className='btn' type="submit">Update Entry</button>
                     </div>
                 </form>
+                </div>
             </Grid>
         </>
     )

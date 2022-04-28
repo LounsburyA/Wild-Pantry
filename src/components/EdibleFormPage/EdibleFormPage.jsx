@@ -35,6 +35,7 @@ function EdibleFormPage() {
         <>
             <h1 className='formTitle'><span>Add to the Pantry</span></h1>
             <Grid container justifyContent="center">
+            <div className='formJournal'>
                 <form noValidate autoComplete='off' onSubmit={addEdible} className='form' >
 
                     <div className='formDiv'>
@@ -95,7 +96,10 @@ function EdibleFormPage() {
                     <div className="navPantry">
                     <button type="submit" className='btn'>Add Item</button>
                     </div>
+
+                  
                 </form>
+                </div>
             </Grid>
 
 
