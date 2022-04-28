@@ -35,7 +35,7 @@ function EdibleListPage() {
                     />))}
                 </div>
             </div>
-            <div className="navpantry">
+            <div className="navPantry">
                 {user.clearance > 2 ?
                     <button onClick={toPantryForm} className='btn'>Add to Pantry</button> : ''}
 
