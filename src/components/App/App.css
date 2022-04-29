@@ -39,7 +39,8 @@ Button
   border-width: 1px 1px 3px;
   border-radius: 4px;
   background-color: #587e76;
-  color: #ebc334;
+  /* color: #ebc334; */
+  color: #ffa64d;
   font-size: 1em;
   outline: 0;
   cursor: pointer;
@@ -123,7 +124,8 @@ input {
 }
 
 .formTitle {
-  color: #ebc334;
+  /* color: #ebc334; */
+  color: #ffa64d;
   text-align: center;
   font-size: 2em;
 }

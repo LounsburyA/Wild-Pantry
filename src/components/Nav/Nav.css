@@ -28,7 +28,8 @@
 
 .navLink {
   display: inline-block;
-  color:#ebc334;
+  /* color:#ebc334; */
+  color: #ffa64d;
   background-color: #587e76;
   text-align: center;
   padding: 6px 6px;
