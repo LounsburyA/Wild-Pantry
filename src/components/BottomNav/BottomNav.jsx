@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     root: {
         width: '100%',
-        backgroundColor: "#dbceb0",
+        backgroundColor: ' #dbceb0',
         position: 'fixed',
         bottom: 0
     }
@@ -29,19 +29,12 @@ function BottomNav() {
                 }}
             >
 
-<BottomNavigationAction
-                    component={Link}
-                    to='/journal'
-                    label='Journal'
-                    icon={'Journal'}
-                />
-
 
 
                 <BottomNavigationAction
                     component={Link}
                     to='/pantry'
-                    label='Pantry'
+                    //label='Pantry'
                     icon={'Pantry'}
                 />
 
@@ -50,7 +43,7 @@ function BottomNav() {
                 <BottomNavigationAction
                     component={Link}
                     to='/journalform'
-                    label='Journal Entry'
+                    //label='Journal Entry'
                     icon={'Journal Entry'}
                 />
 
@@ -60,7 +53,7 @@ function BottomNav() {
                 <BottomNavigationAction
                     component={Link}
                     to='/journal'
-                    label='Journal'
+                   // label='Journal'
                     icon={'Journal'}
                 />
 
