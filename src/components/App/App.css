@@ -34,18 +34,18 @@ Button
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 5px ;
   border-color: #014041;
   border-width: 1px 1px 3px;
   border-radius: 4px;
   background-color: #587e76;
   /* color: #ebc334; */
   color: #ffa64d;
-  font-size: 1em;
+  font-size: 1.2em;
   outline: 0;
   cursor: pointer;
   margin: 4px;
-  width: 6em;
+  width: 5.5em;
   height: 3em;
 }
 

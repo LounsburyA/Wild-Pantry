@@ -43,7 +43,7 @@ function EditUserForm() {
                 <div className='formJournal'>
                     <form noValidate autoComplete="off" onSubmit={handleSubmit} className='Form'>
 
-{/* for future use uploading photos */}
+                        {/* for future use uploading photos */}
                         {/* <div className='formDiv'>
                             <TextField
                                 label="Picture URL"

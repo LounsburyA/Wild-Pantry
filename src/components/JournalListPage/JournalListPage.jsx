@@ -36,7 +36,7 @@ function JournalListPage() {
         // </>
 
         <>
-        <h1 className="formTitle">{user.username}'s Journal</h1>
+            <h1 className="formTitle">{user.username}'s Journal</h1>
             <div>
                 <Container >
                     <Grid container spacing={2} direction="column" alignItems="center" justify="center">
