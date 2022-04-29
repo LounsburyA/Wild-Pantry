@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     root: {
         width: '100%',
-        backgroundColor: ' #dbceb0',
+        backgroundColor: '#dbceb0 !important',
         position: 'fixed',
         bottom: 0
     }

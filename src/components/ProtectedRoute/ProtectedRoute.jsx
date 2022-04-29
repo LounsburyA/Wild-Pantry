@@ -32,7 +32,8 @@ function ProtectedRoute({ component, children, ...props }) {
         <ProtectedComponent />
         :
         // Otherwise, redirect to the Loginpage
-        <LoginPage />
+        //<LoginPage /> // instead of rendering a component, you should use a redirect to send them to the vir with the component you want! 
+        <Redirect to="/login" />
       }
     </Route>
 

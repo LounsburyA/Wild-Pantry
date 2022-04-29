@@ -22,7 +22,7 @@ function EdibleItem({ item }) {
         dispatch({ type: 'SEND_EDIBLE', payload: item })
         history.push(`/editpantry/${item.id}`)
     }
-    let cardStyle={
+    let cardStyle = {
         display: 'block',
         width: "80vw",
         backgroundColor: '#e6e2d3'
@@ -49,24 +49,25 @@ function EdibleItem({ item }) {
         //     </>
         // </div>
         <>
-        <div className='card'>
-            <Card  style = {cardStyle} raised= {true}>
-                <CardMedia
-                    component="img"
-                    image={item.image} 
+            <div className='card'>
+                <Card style={cardStyle} raised={true}>
+                    <CardMedia
+                        component="img"
+                        image={item.image}
 
                     />
-                <CardContent>Name:  {item.edible} </CardContent>
-                <CardContent>Description:  {item.description} </CardContent>
-                <CardContent>Season:  {item.season} </CardContent>
-                <CardContent>Location:  {item.location} </CardContent>
-                {user.clearance > 2 ?
-                <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
-                    className='btn'>Delete</button> : ''}
-            {user.clearance > 2 ?
-                <button onClick={toEditPantry} className='btn'>Edit</button> : ''}
-
-            </Card>
+                    <CardContent>Name:  {item.edible} </CardContent>
+                    <CardContent>Description:  {item.description} </CardContent>
+                    <CardContent>Season:  {item.season} </CardContent>
+                    <CardContent>Location:  {item.location} </CardContent>
+                    <div className='centerBtn'>
+                        {user.clearance > 2 ?
+                            <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
+                                className='btn'>Delete</button> : ''}
+                        {user.clearance > 2 ?
+                            <button onClick={toEditPantry} className='btn'>Edit</button> : ''}
+                    </div>
+                </Card>
             </div>
         </>
     )
@@ -74,5 +75,5 @@ function EdibleItem({ item }) {
 export default EdibleItem;
 
 
-// {user.id === edible.user_id ?
+
 

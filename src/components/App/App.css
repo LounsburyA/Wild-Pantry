@@ -109,8 +109,8 @@ Form Treatment
   width: 400px;
   max-width: 100%;
   padding: 25px;
-  margin: 0 auto 20px;
-  background-color: #efefef;
+  margin: 5px auto 20px;
+  background-color: #e6e2d3;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
 
@@ -128,7 +128,7 @@ input {
   font-size: 2em;
 }
 
-.formTitle span {
+.formTitle {
   padding-inline-start: 1em;
   padding-inline-end: 1em;
   background-color: #587e76;
@@ -144,18 +144,22 @@ input {
   color:#c1502e;
   justify-content: center;
 }
-.navPantry{
-  /* margin: 3em; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: sticky;
-  bottom: 0px;;
-  align-self: flex-end;
-  background-color:black; */
-}
+
 
 .formJournal{
   border: solid 1px #014041;
   background-color: #e6e2d3;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.4);
+}
+.navPantry{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4em;
+}
+.centerBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

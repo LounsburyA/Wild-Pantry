@@ -97,7 +97,6 @@ function EdibleFormPage() {
                     <button type="submit" className='btn'>Add Item</button>
                     </div>
 
-                  
                 </form>
                 </div>
             </Grid>

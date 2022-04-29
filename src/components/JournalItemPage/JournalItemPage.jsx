@@ -39,6 +39,7 @@ function JournalItem({ item }) {
         //     </>
         // </div>
         <>
+        
             <div className='card'>
                 <Card  style={cardStyle} raise={true}>
                     <CardMedia
@@ -49,9 +50,11 @@ function JournalItem({ item }) {
                     <CardContent>Description:  {item.description} </CardContent>
                     <CardContent>Season:  {item.season} </CardContent>
                     <CardContent>Location:  {item.location} </CardContent>
+                    <div className='centerBtn'>
                     <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
                         className='btn'>Delete</button>
                     <button onClick={toEdit} className='btn'>Edit</button>
+                    </div>
             </Card>
             </div>
         </>

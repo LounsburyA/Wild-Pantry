@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import { TextField, Container, Grid } from '@mui/material';
+
+
 
 function JournalFormPage() {
     const [newPicture, setNewPicture] = useState('');
@@ -12,6 +14,7 @@ function JournalFormPage() {
 
     const dispatch = useDispatch();
     const history = useHistory();
+    const user = useSelector((store) => store.user);
 
     const addEdible = (event) => {
         event.preventDefault();
@@ -36,21 +39,22 @@ function JournalFormPage() {
 
     return (
         <>
-            <h1 className='formTitle'><span onClick={dummyData} >Journal Entry</span></h1>
-           
-                <Grid container justifyContent="center">
+            <h1 className='formTitle'><span onClick={dummyData} >{user.username}'s Journal Entry</span></h1>
+
+            <Grid container justifyContent="center">
                 <div className='formJournal'>
                     <form noValidate autoComplete='off' onSubmit={addEdible} >
 
+                        {/* left here for photo upload for when I get it working */}
 
-                        <div className='formDiv'>
+                        {/* <div className='formDiv'>
                             <TextField
                                 label="Picture URL"
                                 type="text"
                                 value={newPicture}
                                 onChange={(event) => setNewPicture(event.target.value)}
                             />
-                        </div>
+                        </div> */}
 
                         <div className='formDiv'>
                             <TextField
@@ -91,9 +95,9 @@ function JournalFormPage() {
                             <button className='btn' type="submit">Add Item</button>
                         </div>
                     </form>
-                    </div>
-                </Grid>
-          
+                </div>
+            </Grid>
+
             <div className="navPantry">
                 <button className='btn' onClick={toPantry}>The Pantry</button>
                 <button className='btn' onClick={toJournal}>Your Journal</button>

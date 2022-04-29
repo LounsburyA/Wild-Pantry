@@ -48,6 +48,9 @@ function EdibleListPage() {
         //     </div>
         // </>
         <>
+       <h1 className="formTitle"> Update Journal Entry </h1>
+        <h2></h2>
+        
             <div>
                 <Container >
                     <Grid container spacing={2} direction="column" alignItems="center" justify = "center">
