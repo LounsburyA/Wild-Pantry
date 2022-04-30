@@ -1,3 +1,4 @@
+import { style } from '@mui/system';
 import React from 'react';
 
 // This is one of our simplest components
@@ -7,16 +8,19 @@ import React from 'react';
 
 function AboutPage() {
   return (
-    <div className="container">
-      <div>
-     <ul>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-     </ul>
+    <div>
+      <div className='about'>
+        <h1>Technology Used: </h1>
+        <ul className='techList'>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>React Redux</li>
+          <li>Redux Saga</li>
+          <li>Express.js</li>
+          <li>Node.js</li>
+          <li>PostgreSQL</li>
+          <li>Material UI (MUI)</li>
+        </ul>
       </div>
     </div>
   );
