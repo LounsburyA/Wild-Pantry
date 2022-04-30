@@ -26,18 +26,7 @@ function JournalItem({ item }) {
 
     //displays user pantry edible info
     return (
-        // <div>
-        //     <>
-        //         <img src={item.image} />
-        //         <div>Name: {item.item_name}</div>
-        //         <div>Description: {item.description}</div>
-        //         <div>Season: {item.season}</div>
-        //         <div>Location: {item.location}</div>
-        //         <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
-        //         className='btn'>Delete</button>
-        //         <button onClick ={toEdit} className='btn'>Edit</button>
-        //     </>
-        // </div>
+        
         <>
         
             <div className='card'>
@@ -46,10 +35,10 @@ function JournalItem({ item }) {
                         component="img"
                         image={item.image} />
                     
-                    <CardContent>Name:  {item.item_name} </CardContent>
-                    <CardContent>Description:  {item.description} </CardContent>
-                    <CardContent>Season:  {item.season} </CardContent>
-                    <CardContent>Location:  {item.location} </CardContent>
+                    <CardContent><strong>Name: </strong> {item.item_name} </CardContent>
+                    <CardContent><strong>Description:</strong>  {item.description} </CardContent>
+                    <CardContent><strong>Season:</strong>  {item.season} </CardContent>
+                    <CardContent><strong>Location:</strong>  {item.location} </CardContent>
                     <div className='centerBtn'>
                     <button onClick={(event) => dispatch({ type: 'DELETE_ENTRY', payload: item.id })}
                         className='btn'>Delete</button>

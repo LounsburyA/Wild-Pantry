@@ -23,6 +23,7 @@ function JournalFormPage() {
                 { image: newPicture, edible: newEdible, description: newDescription, season: newSeason, location: newLocation }
         })
         setNewPicture(''); setNewEdible(''); setNewDescription(''); setNewSeason(''); setNewLocation('');
+        history.push('/journal')
     }
     const dummyData = () => {
 
@@ -39,7 +40,7 @@ function JournalFormPage() {
 
     return (
         <>
-            <h1 className='formTitle'><span onClick={dummyData} >{user.username}'s Journal Entry</span></h1>
+            <h2 className='formTitle' onClick={dummyData} ><span> Journal Entry</span></h2>
 
             <Grid container justifyContent="center">
                 <div className='formJournal'>
@@ -92,7 +93,7 @@ function JournalFormPage() {
                             />
                         </div>
                         <div className="navPantry">
-                            <button className='btn' type="submit">Add Item</button>
+                            <button className='btn' type="submit">Add Entry</button>
                         </div>
                     </form>
                 </div>

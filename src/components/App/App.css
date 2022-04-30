@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
   background-color: #dbceb0;
-  color: #c1502e;
+  color:#ffa64d;
 }
 
 img {
@@ -128,13 +128,19 @@ input {
   color: #ffa64d;
   text-align: center;
   font-size: 2em;
+
 }
 
-.formTitle {
+.formTitle span{
   padding-inline-start: 1em;
   padding-inline-end: 1em;
   background-color: #587e76;
+  padding: 8px;
+  border-radius: 4px;
+  
 }
+
+
 
 .edit {
   background-color: white;
@@ -143,7 +149,7 @@ input {
   margin: 1em;
 }
 .card {
-  color:#c1502e;
+  color:#ffa64d;
   justify-content: center;
 }
 
@@ -153,6 +159,7 @@ input {
   background-color: #e6e2d3;
   border-radius: 4px;
   box-shadow: 0 2px 2px rgb(0, 0, 0, 0.4);
+  
 }
 .navPantry{
   display: flex;

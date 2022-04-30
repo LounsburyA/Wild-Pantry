@@ -30,24 +30,7 @@ function EdibleItem({ item }) {
 
     // displays info for edibles in main pantry
     return (
-        //pre mui addition code
 
-
-        // <div className='container'>
-
-        //     <>
-        //         <img src={item.image} height="200px" />
-        //         <div>Name: {item.edible}</div>
-        //         <div>Description: {item.description}</div>
-        //         <div>Season: {item.season}</div>
-        //         <div>Location: {item.location}</div>
-        //             {user.clearance > 2 ?
-        //         <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}
-        //         className='btn'>Delete</button>: ''}
-        //         {user.clearance > 2 ?
-        //         <button onClick={toEditPantry} className='btn'>Edit</button>:''}
-        //     </>
-        // </div>
         <>
             <div className='card'>
                 <Card style={cardStyle} raised={true}>
@@ -56,10 +39,10 @@ function EdibleItem({ item }) {
                         image={item.image}
 
                     />
-                    <CardContent>Name:  {item.edible} </CardContent>
-                    <CardContent>Description:  {item.description} </CardContent>
-                    <CardContent>Season:  {item.season} </CardContent>
-                    <CardContent>Location:  {item.location} </CardContent>
+                    <CardContent><strong>Name:</strong>  {item.edible} </CardContent>
+                    <CardContent><strong>Description:</strong>  {item.description} </CardContent>
+                    <CardContent><strong>Season:</strong>  {item.season} </CardContent>
+                    <CardContent><strong>Location:</strong>  {item.location} </CardContent>
                     <div className='centerBtn'>
                         {user.clearance > 2 ?
                             <button onClick={(event) => dispatch({ type: 'DELETE_EDIBLE', payload: item.id })}

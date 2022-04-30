@@ -27,28 +27,9 @@ function EdibleListPage() {
 
 
     return (
-        // code pre adding material ui keeping for reference 
-        // trying out different styling  options
-        // <>
-        //     <div className="list">
-        //         <h1 className="formTitle"><span>Wild Pantry</span></h1>
-        //         <div className=" listItem">{edible.map(item => (
-        //             <EdibleItem key={item.id}
-        //                 item={item}
-        //             />))}
-        //         </div>
-        //     </div>
-        //     <div className="navPantry">
-        //         {user.clearance > 2 ?
-        //             <button onClick={toPantryForm} className='btn'>Add to Pantry</button> : ''}
-
-        //         <button onClick={toJournalForm} className='btn'> Make Journal Entry</button>
-
-        //         <button onClick={toJournal} className='btn'>{user.username}'s' Journal</button>
-        //     </div>
-        // </>
+     
         <>
-            <h1 className="formTitle"> Update Journal Entry </h1>
+            <h1 className="formTitle"><span>The Pantry </span></h1>
             <h2></h2>
 
             <div>
@@ -69,7 +50,7 @@ function EdibleListPage() {
 
                 <button onClick={toJournalForm} className='btn'> Journal Entry</button>
 
-                <button onClick={toJournal} className='btn'>{user.username}'s Journal</button>
+                <button onClick={toJournal} className='btn'>Your Journal</button>
             </div>
         </>
     )

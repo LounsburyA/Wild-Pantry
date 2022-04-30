@@ -94,7 +94,7 @@ function EdibleFormPage() {
                         />
                     </div>
                     <div className="navPantry">
-                    <button type="submit" className='btn'>Add Item</button>
+                    <button type="submit" className='btn'>Add Entry</button>
                     </div>
 
                 </form>

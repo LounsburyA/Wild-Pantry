@@ -12,8 +12,8 @@ function UserPage() {
   return (
     <>
       <div className="container">
-        <h2>Welcome, {user.username}!</h2>
-<h4></h4>
+        <h2 className='formTitle'><span>Welcome, {user.username}!</span></h2>
+
         <LogOutButton className="btn" />
         <div> <button onClick={toPantry} className='btn'>The Pantry</button></div>
       </div>

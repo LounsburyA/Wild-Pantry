@@ -21,22 +21,10 @@ function JournalListPage() {
     }
 
     return (
-        // <>
-        // <div className="container">
-        //     <h1 className="formTitle"><span>{user.username}'s Journal</span></h1>
-        //     <ul>{journal.map(item=>(
-        //         <JournalItem key={item.id}
-        //         item ={item}
-        //     />))}
 
-        //     </ul>
-        // </div>
-        // <button onClick = {toPantry} className='btn'>The Pantry</button>
-        // <button onClick = {toJournalForm} className='btn'>Make Journal Entry</button>
-        // </>
 
         <>
-            <h1 className="formTitle">{user.username}'s Journal</h1>
+            <h1 className="formTitle"><span>{user.username}'s Journal</span></h1>
             <div>
                 <Container >
                     <Grid container spacing={2} direction="column" alignItems="center" justify="center">
