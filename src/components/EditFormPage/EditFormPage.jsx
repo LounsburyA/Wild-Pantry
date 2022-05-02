@@ -34,7 +34,7 @@ function EditUserForm() {
 
     }
 
-
+// edit page for User entries into their Journal
     console.log(editJournal, 'this is what we are looking for');
     return (
         <>

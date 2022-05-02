@@ -29,7 +29,7 @@ function EdibleFormPage() {
         history.push('/pantry')
     }
 
-
+// this is the form to enter new edibles to the Pantry
 
     return (
         <>

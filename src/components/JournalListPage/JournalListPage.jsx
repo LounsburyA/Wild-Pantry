@@ -22,7 +22,7 @@ function JournalListPage() {
 
     return (
 
-
+// Displays information on the Journal page
         <>
             <h1 className="formTitle"><span>{user.username}'s Journal</span></h1>
             <div>

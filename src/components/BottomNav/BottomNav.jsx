@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     }
 })
 
-
+// bottom navigation bar at bottom to route to frequently used pages
 function BottomNav() {
     const classes = useStyles()
     const [value, setValue] = React.useState(0)

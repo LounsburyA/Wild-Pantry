@@ -13,6 +13,7 @@ function EdibleListPage() {
     const user = useSelector(store => store.user);
     const history = useHistory();
 
+    // navigation buttons at bottom of page for routing to applicable pages
     const toPantryForm = () => {
         history.push('/edibleform')
     }
@@ -25,7 +26,7 @@ function EdibleListPage() {
     }
 
 
-
+// lists out the information on the Pantry page
     return (
      
         <>
