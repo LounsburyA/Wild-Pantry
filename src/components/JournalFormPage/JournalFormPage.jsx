@@ -25,11 +25,16 @@ function JournalFormPage() {
         setNewPicture(''); setNewEdible(''); setNewDescription(''); setNewSeason(''); setNewLocation('');
         history.push('/journal')
     }
-    const dummyData = () => {
 
-        setNewPicture('images/pheasantback.jpg'); setNewEdible('Pheasants Back'); setNewDescription('Shelf mushroom with brown feathery appearance on its scaly cap');
-        setNewSeason('Spring'); setNewLocation('Dakota County');
-    }
+// dummy data for presentation purposes 
+
+    // const dummyData = () => {
+
+    //     setNewPicture('images/pheasantback.jpg'); setNewEdible('Pheasants Back'); setNewDescription('Shelf mushroom with brown feathery appearance on its scaly cap');
+    //     setNewSeason('Spring'); setNewLocation('Dakota County');
+    // }
+
+    //   add this to h2 to make a dummy data button again ----->  onClick={dummyData}
 
     const toJournal = () => {
         history.push('/journal')
@@ -40,7 +45,7 @@ function JournalFormPage() {
 
     return (
         <>
-            <h2 className='formTitle' onClick={dummyData} ><span> Journal Entry</span></h2>
+            <h2 className='formTitle'><span> Journal Entry</span></h2>
 
             <Grid container justifyContent="center">
                 <div className='formJournal'>
