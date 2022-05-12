@@ -53,14 +53,14 @@ function JournalFormPage() {
 
                         {/* left here for photo upload for when I get it working */}
 
-                        <div className='formDiv'>
+                        {/* <div className='formDiv'>
                             <TextField
                                 label="Picture URL"
                                 type="text"
                                 value={newPicture}
                                 onChange={(event) => setNewPicture(event.target.value)}
                             />
-                        </div>
+                        </div> */}
 
                         <div className='formDiv'>
                             <TextField
