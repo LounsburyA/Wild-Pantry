@@ -9,7 +9,7 @@ Being outdoors is fun, fresh air, exercise, and great views.  You can also find 
 Wild edibles can be found all over.  The function of this app is to help users get into to foraging.  It will show users wild edible plants and mushrooms with descriptions and other information.  It also provides users with a journal to keep track of theur finds.
 ## Screenshots
 
-![ScreenShot 1](/ScreenShot1.png?raw=true "Screenshot")
+![ScreenShot 1](/ScreenShot1.jpg?raw=true "Screenshot")
 
 ## Built With
 
