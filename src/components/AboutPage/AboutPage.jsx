@@ -19,7 +19,7 @@ function AboutPage() {
           <li>Express.js</li>
           <li>Node.js</li>
           <li>PostgreSQL</li>
-          <li>Material UI (MUI)</li>
+          <li>Material UI </li>
         </ul>
       </div>
     </div>
