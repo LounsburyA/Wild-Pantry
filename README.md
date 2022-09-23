@@ -34,11 +34,7 @@ Open up your editor of choice and run an npm install
 
 
 1. Clone this repo.
-<<<<<<< HEAD
 2. Set up a database "wildedibles" in Postgres. Using the database.sql file, create all the tables, add the Alter Tables commands, and then add all the data. 
-=======
-2. Set up a database called wildedibles in Postgres. Using the database.sql file, create all the tables, add the Alter Tables commands, and then add all the data. 
->>>>>>> 8793d3d702beae2e0c7a0efbaa284a719d4a8253
 3. In your code editing program's terminal, run 'npm install' as a terminal command.
 5. Run npm run server in your terminal.
 6. Run npm run client in your terminal.
@@ -47,5 +43,4 @@ Open up your editor of choice and run an npm install
 
 ## Acknowledgements
 
-Thank you to Prime Digital Academy 
 Thank you to Prime Digital Academy 
