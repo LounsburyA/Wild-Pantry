@@ -6,7 +6,7 @@
 
 Wild Pantry is a full CRUD, full-stack application.
 Being outdoors is fun, fresh air, exercise, and great views.  You can also find food!
-Wild edibles can be found all over.  The function of this app is to help users get into to foraging.  It will show users wild edible plants and mushrooms with descriptions and other information.  It also provides users with a journal to keep track of theur finds.
+Wild edibles can be found all over.  The function of this app is to help users get into to foraging.  It will show users wild edible plants and mushrooms with descriptions and other information.  It also provides users with a journal to keep track of their finds.
 ## Screenshots
 
 ![ScreenShot 1](/ScreenShot1.jpg?raw=true "Screenshot")
@@ -34,7 +34,7 @@ Open up your editor of choice and run an npm install
 
 
 1. Clone this repo.
-2. Set up a database called saloon-keeper in Postgres. Using the database.sql file, create all the tables, add the Alter Tables commands, and then add all the data. 
+2. Set up a database "wildedibles" in Postgres. Using the database.sql file, create all the tables, add the Alter Tables commands, and then add all the data. 
 3. In your code editing program's terminal, run 'npm install' as a terminal command.
 5. Run npm run server in your terminal.
 6. Run npm run client in your terminal.
